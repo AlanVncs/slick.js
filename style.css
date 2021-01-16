@@ -1,0 +1,55 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.root {
+    background-color: white;
+    width: 70%;
+    height: 8000px;
+    padding-top: 100px;
+}
+
+.nabuco {
+    background-color: #eeeeee;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.nabuco ul {
+    counter-reset: product;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 3px solid black;
+}
+
+.img::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    counter-increment: product;
+    content: counter(product);
+}
+
+.info {
+    text-align: center;
+    padding-top: 5px;
+}
